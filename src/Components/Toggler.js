@@ -30,7 +30,7 @@ const Moon = styled.svg`
 
 export const Toggler = ({ theme, toggleTheme }) => {
     return (
-        <Button>
+        <Button onClick={toggleTheme}>
             {
                 theme === "light" ? <Moon xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <path style={{ fill: "#F6C358" }} d="M10.719 2.082c-2.572 2.028-4.719 5.212-4.719 9.918 0 
