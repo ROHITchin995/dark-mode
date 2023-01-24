@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+.card-channel{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.card-title{
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.card-link{
+  text-decoration: none;
+  color: inherit;
+}
+.card{
+  width: calc(33% - 10px);
+  margin: 20px 0;
+}
