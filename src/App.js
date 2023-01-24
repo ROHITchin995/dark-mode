@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import dummyData from "./data";
 import './App.css';
+import { useEffect, useState } from "react";
+import { CardList } from "./Components/CardList";
 
 function App() {
+  
+  const [videos, setVideos] = useState([])
+
+  useEffect(()=>{
+    setVideos(dummyData)
+  }, [])
+  console.log(videos);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    {
+      videos.map((list, index)=>{
+        return (
+          <section key={index}>
+            <h2>{list.section}</h2>
+            <CardList list={list}/>
+            <hr />
+          </section>
+        )
+      })
+    }
+    </>
   );
 }
 
